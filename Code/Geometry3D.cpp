@@ -361,9 +361,9 @@ bool AABBOBB(const AABB& aabb, const OBB& obb) {
 	};
 
 	for (int i = 0; i < 3; ++i) { // Fill out rest of axis
-		test[6 + i * 3 + 0] = Cross(test[i], test[0]);
-		test[6 + i * 3 + 1] = Cross(test[i], test[1]);
-		test[6 + i * 3 + 2] = Cross(test[i], test[2]);
+		test[6 + i * 3 + 0] = Cross(test[i], test[3]);
+		test[6 + i * 3 + 1] = Cross(test[i], test[4]);
+		test[6 + i * 3 + 2] = Cross(test[i], test[5]);
 	}
 
 	for (int i = 0; i < 15; ++i) {
