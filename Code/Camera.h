@@ -65,7 +65,7 @@ public:
 
 	void Rotate(const vec2& deltaRot, float deltaTime);
 	void Zoom(float deltaZoom, float deltaTime);
-	void Pan(const vec2& delataPan, float deltaTime);
+	void Pan(const vec2& deltaPan, float deltaTime);
 
 	void Update(float dt);
 	float ClampAngle(float angle, float min, float max);
