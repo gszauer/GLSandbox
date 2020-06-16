@@ -223,13 +223,13 @@ void OrbitCamera::Zoom(float deltaZoom, float deltaTime) {
 	}
 }
 
-void OrbitCamera::Pan(const vec2& delataPan, float deltaTime) {
+void OrbitCamera::Pan(const vec2& deltaPan, float deltaTime) {
 	vec3 right(m_matWorld._11, m_matWorld._12, m_matWorld._13);
 
 	// Pan X axis in local space
-	target = target - (right * (delataPan.x * panSpeed.x * deltaTime));
+	target = target - (right * (deltaPan.x * panSpeed.x * deltaTime));
 	// Pan Y Axis in global space
-	target = target + (vec3(0, 1, 0) * (delataPan.y * panSpeed.y * deltaTime));
+	target = target + (vec3(0, 1, 0) * (deltaPan.y * panSpeed.y * deltaTime));
 
 	// Reset zoom to allow infinate zooming after a motion
 	// This part of the code is not in the book!
